@@ -1,0 +1,45 @@
+<div class="w3layouts-two-grids">
+    <div class="mid-class">
+        <div class="txt-left-side">
+            <h2> Sign Up </h2>
+            <form action="#" method="post">
+                    <div class="form-left-to-w3l" data-validate="Username is reauired">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            <input type="email" name="email" placeholder="Username" required="" [(ngModel)]="email">
+                    <div class="clear"></div>
+                    </div>
+                
+                <div class="form-left-to-w3l" data-validate="Password is required">
+                        <span class="fa fa-lock" aria-hidden="true"></span>
+                    <input type="password" name="password" placeholder="Password" required="" [(ngModel)]="password">
+                    <div class="clear"></div>
+                </div>
+                <div class="form-left-to-w3l" data-validate="Username is reauired">
+                    <span class="fa fa-lock" aria-hidden="true"></span>
+                    <input type="password" name="Cemail" placeholder="Confirm Password" required="">
+            <div class="clear"></div>
+            </div>
+
+                <div class="main-two-w3ls">
+                    <div class="right-side-forget">
+                        <a href="#" class="for" style="color: #53abec">Forgot password...?</a>
+                    </div>
+                </div>
+                <div class="btnn">
+                    <button type="submit" (click)="sub()">Sign Up </button>
+                </div>
+            </form>
+            <div class="w3layouts_more-buttn">
+                    <h3>Have an account..?<a routerLink="../../login">Login Here</a></h3>
+                </div>
+        </div>
+
+        <div class="img-right-side">
+            <!--<h3>Never Stop Learning</h3>-->
+            <h3></h3>
+            <p>Attitude is more important than the past, than education, than money, than circumstances, than what people do or say. It is more important than appearance, giftedness, or skill!!</p>
+            <img src="../../../assets/images/sideImage1.jpg" class="img-fluid" alt="">
+        </div>
+        
+    </div>
+</div>

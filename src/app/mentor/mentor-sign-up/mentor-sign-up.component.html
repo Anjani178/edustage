@@ -1,0 +1,90 @@
+<div class="w3layouts-two-grids">
+        <div class="mid-class">
+            <div class="txt-left-side" style="height: 685px;position: relative;
+            left: 290px;">
+                <h2> Sign Up </h2>
+                <form action="#" method="post">
+                        <div class="form-left-to-w3l" data-validate="Username">
+                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                                <input type="email" name="email" placeholder="Username" required="" [(ngModel)]= "email">
+                                <div class="clear"></div>
+                                </div>
+                        <div class="form-left-to-w3l" style="position: relative;
+                        bottom: 62px;
+                        left: 320px;
+                        height: 40px">
+                                <span class="fa fa-graduation-cap" aria-hidden="true"></span>
+                                    <input class ="ai" list="hosting-plan" type="text" name="technologies" placeholder="Technologies" [(ngModel)]="technologies" style="    width: 300px;">
+                                    <datalist id="hosting-plan">
+                                        <option value="Java"></option>
+                                        <option value="C"></option>
+                                        <option value="C++"></option>
+                                        <option value="Python"></option>
+                                        <option value="R"></option>
+                                        <option value="JavaScript"></option>
+                                        <option value="HTML"></option>
+                                        <option value="CSS"></option>
+                                    </datalist>
+                                    </div>
+                        <div class="form-left-to-w3l" style="position: relative;
+                        bottom: 40px;"> 
+                            <span class="fa fa-tasks" aria-hidden="true"></span>
+                                <input class="ai"list="faci" type="text" name="facilities" placeholder="Facilities"style="    width: 300px;"[(ngModel)]="facilities">
+                                    <datalist id="faci">
+                                        <option value="Cloud Labs"></option>
+                                        <option value="Materials"></option>
+                                        <option value="Examples"></option>
+                                    </datalist>
+                        </div>
+                        <div class="form-left-to-w3l" style="position: relative;bottom: 99px;left: 320px;">
+                            <span class="fa fa-hourglass-2" aria-hidden="true"></span>
+                                <input class="ai" type="number" name="experience" placeholder="Experience" style="    width: 300px; color:gray;" [(ngModel)]="experience">
+                        </div>
+                        <div id="A"class="form-left-to-w3l" style="position: relative;bottom: 74px;">
+                            <label for="appt" style="color: gray;font-size:12px;font-family: 'Open Sans', sans-serif; position: relative; top:5px; left:10px;  ">From:</label>
+                            <input class="ai" type="time" id="appt" name="timeStart" min="09:00" max="18:00" required style="color: gray;width:260px; position: relative; left:15px;" [(ngModel)]="timeStart">
+                        </div>
+                        <div id="A"class="form-left-to-w3l" style="position: relative; bottom: 125px; left: 320px;">
+                            <label for="appt1" style="color: gray;font-size:12px;font-family: 'Open Sans', sans-serif; position: relative; top:5px; left:10px;" >To:</label>
+                            <input class="ai" type="time" id="appt1" name="timeEnd" min="09:00" max="18:00" required style="color: gray;width:275px; position: relative; left:15px;"[(ngModel)]="timeEnd">
+                        </div>
+                        <br>
+                        <div class="form-left-to-w3l" style="position: relative;bottom: 112px" >
+                            <span class="fa fa-tag" aria-hidden="true"></span>
+                            <input class="ai"  type="url" name="url" placeholder="LinkedIn Url" [(ngModel)]="url">
+                        </div>
+                            <div class="form-left-to-w3l" style="position: relative;bottom: 172px;left: 320px;" >
+                                    <span class="fa fa-id-card-o" aria-hidden="true"></span>
+                                        <input class="ai" type="text" name="number" placeholder="Email/Contact Number" [(ngModel)]="number" >
+                                    </div>
+                            <div class="form-left-to-w3l" data-validate="Password is required" style="position: relative;
+                            bottom: 140px;"  >
+                                    <span class="fa fa-lock" aria-hidden="true"></span>
+                                        <input class="ai" class="input100" type="password" name="password" placeholder="Password"[(ngModel)]="password">
+                                    </div>
+                            <div class="form-left-to-w3l" data-validate="Confirm Password" style="position: relative;
+                                        bottom: 201px;
+                                        left: 320px;" >
+                                            <span class="fa fa-lock" aria-hidden="true"></span>
+                                            <input class="ai" class="input100" type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
+                                        </div>
+        <div class="main-two-w3ls" style="    position: relative;bottom: 200px;">
+                        <div class="right-side-forget" style="    position: relative;top: -10px; color: #53abec">
+                            <a href="#" class="for">Forgot password...?</a>
+                        </div>
+                    </div>
+                    <div class="btnn" style="    position: relative; bottom: 192px;">
+                        <button type="submit"(click)="sub1()">Sign Up</button>
+                    </div>
+                </form>
+                <div class="w3layouts_more-buttn" style="    position: relative;bottom: 230px;">
+                        <h3>Have an account..?
+                            <a routerLink="../../login">Login Here
+                            </a>
+                        </h3>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+    
