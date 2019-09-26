@@ -23,6 +23,14 @@ app.use(function(req,res){
     res.json(err)
 })
 
+app.use((err, req, res, next) => {
+    if (err.name === 'ValidationError') {
+        var valErrors = [];
+        Object.keys(err.errors).forEach(key => valErrors.push(err.errors[key].message));
+        res.status(422).send(valErrors)
+    }
+});
+
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/Edustage',{useNewUrlParser:true})
 
