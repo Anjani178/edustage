@@ -19,18 +19,4 @@ router.post('/info',function(req,res){
         res.status(200).json(note);
     })
 })
-router.post('/login',function(req,res){
-    let e = new info(req.email);
-    let p = new info(req.password);
-        var dbo = db.db('Edustage');
-        var query = {email:e, password: p}
-        var output = dbo.collection('infos').find(query)
-        if(output == password){
-            console.log('Found');
-        }else{
-            console.log('Not found');
-        }
-        db.close();
-        res.end();
-    });
 }
