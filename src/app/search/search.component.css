@@ -1,0 +1,174 @@
+.s01{
+    min-height: 68vh;
+    position: relative;
+    top: 80px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0, 0, 0, 0.001);
+  background-size: cover;
+  background-position: center center;
+  padding: 15px;
+  }
+  fieldset {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    border: 0;
+  }
+  legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color:white;
+    border: 0;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .s01 form {
+    width: 100%;
+    max-width: 1290px;
+  }
+  .s01 form .inner-form {
+    padding: 30px 35px;
+  }
+  .s01 form .inner-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px 47px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .s01 form .inner-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px 47px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .s01 form .inner-form .input-field.first-wrap {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .s01 form .inner-form .input-field {
+    height: 50px;
+  }
+  .s01 form .inner-form .input-field {
+    margin-right: 30px;
+    height: 68px;
+  }
+  .s01 form .inner-form .input-field input {
+    height: 100%;
+    background: #fff;
+    border-radius: .5px;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 32px;
+    font-size: 20px;
+  }
+  button, input {
+    overflow: visible;
+  }
+  button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .s01 form .inner-form .input-field.second-wrap {
+    width: 16.77%;
+  min-width: 158px;
+  color:grey;
+  }
+  .s01 form .inner-form .input-field {
+    height: 50px;
+  }
+  .s01 form .inner-form .input-field {
+    margin-right: 30px;
+    height: 68px;
+  }
+  .s01 form .inner-form .input-field input {
+    height: 100%;
+    background: #fff;
+    border-radius: .5px;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 32px;
+    font-size: 20px;
+  }
+  button, input {
+    overflow: visible;
+  }
+  button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .s01 form .inner-form .input-field.third-wrap {
+    width: 180px;
+    margin-right: 0;
+  }
+  .s01 form .inner-form .input-field {
+    height: 50px;
+  }
+  .s01 form .inner-form .input-field {
+    margin-right: 30px;
+    height: 68px;
+  }
+  .s01 form .inner-form .input-field.third-wrap .btn-search {
+    height: 100%;
+    width: 100%;
+    background: #4272d7;
+    white-space: nowrap;
+    border-radius: .5px;
+    font-size: 20px;
+    color: #fff;
+    transition: all .2s ease-out, color .2s ease-out;
+    border: 0;
+    cursor: pointer;
+  }
+  button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+  }
+  button, select {
+    text-transform: none;
+  }
+  button, input {
+    overflow: visible;
+  }
+  button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+  }
+  .input-field.second-wrap::placeholder { /* Chrome, Firefox, Opera,
+  Safari 10.1+ */
+    color:grey;
+    opacity: 1; /* Firefox */
+  }

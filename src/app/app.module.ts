@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,12 +14,17 @@ import { UserSignUpComponent } from './user/user-sign-up/user-sign-up.component'
 import { MentorSignUpComponent } from './mentor/mentor-sign-up/mentor-sign-up.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserDashComponent } from './user-dash/user-dash.component';
+import { MentorDashComponent } from './mentor-dash/mentor-dash.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSignUpComponent,
-    MentorSignUpComponent
+    MentorSignUpComponent,
+    UserDashComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,8 +35,11 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     LoginModule,
     SignUpModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
+  exports: [ FormsModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

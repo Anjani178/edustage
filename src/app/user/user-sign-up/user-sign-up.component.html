@@ -2,31 +2,37 @@
     <div class="mid-class">
         <div class="txt-left-side">
             <h2> Sign Up </h2>
-            <form action="#" method="post">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="form-left-to-w3l" data-validate="Username is reauired">
                             <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                            <input type="email" name="email" placeholder="Username" required="" [(ngModel)]="email">
+                            <input type="email" formControlName="email" placeholder="Username" [(ngModel)]="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
                     <div class="clear"></div>
+                    </div>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback" style="position: relative;top: -21px;right:210px;color: red;font-size: 11px;">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email" style="position: relative;left:45px">Email must be a valid email address</div>
                     </div>
                 
-                <div class="form-left-to-w3l" data-validate="Password is required">
+                <div class="form-left-to-w3l" data-validate="Password is required" >
                         <span class="fa fa-lock" aria-hidden="true"></span>
-                    <input type="password" name="password" placeholder="Password" required="" [(ngModel)]="password">
+                    <input type="password" formControlName="password" placeholder="Password" required="" [(ngModel)]="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
                     <div class="clear"></div>
                 </div>
-                <div class="form-left-to-w3l" data-validate="Username is reauired">
-                    <span class="fa fa-lock" aria-hidden="true"></span>
-                    <input type="password" name="Cemail" placeholder="Confirm Password" required="">
-            <div class="clear"></div>
-            </div>
-
-                <div class="main-two-w3ls">
-                    <div class="right-side-forget">
-                        <a href="#" class="for" style="color: #53abec">Forgot password...?</a>
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback" style="position: relative;top: -20px;right:90px;color: red;font-size: 11px;width: 304px;">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength" style="position: relative;left:40px">Password must be at least 6 characters</div>
                     </div>
+                <div class="form-left-to-w3l">
+                    <span class="fa fa-lock" aria-hidden="true"></span>
+                    <input type="password" formControlName="cpassword" placeholder="Confirm Password"  [ngClass]="{ 'is-invalid': submitted && f.cpassword.errors }">
+                <div class="clear"></div>
+            </div>
+                <div *ngIf="submitted && f.cpassword.errors" class="invalid-feedback" style="position: relative;top: -20px;right:90px;color: red;font-size: 11px;width: 304px;">
+                <div *ngIf="f.cpassword.errors.required">Password is required</div>
+                <div *ngIf="f.cpassword.errors.mustMatch">Passwords must match</div>
                 </div>
                 <div class="btnn">
-                    <button type="submit" (click)="sub()">Sign Up </button>
+                    <button type="submit">Sign Up </button>
                 </div>
             </form>
             <div class="w3layouts_more-buttn">
@@ -43,3 +49,7 @@
         
     </div>
 </div>
+<!--https://jasonwatmore.com/post/2018/11/07/angular-7-reactive-forms-validation-example
+https://www.codaffection.com/mean-stack-tutorial/user-registration-in-mean-stack-using-angular-6-front-end/
+https://www.codaffection.com/mean-stack-tutorial/mean-stack-user-registration-backend/
+https://www.codaffection.com/mean-stack-tutorial/user-registration-in-mean-stack-using-angular-6-front-end/-->
