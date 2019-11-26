@@ -9,7 +9,7 @@ export class MentorObj {
     url;
     number;
     role;
-    constructor(email,password,technologies,facilities,experience,timeStart,timeEnd,url,number){
+    constructor(email,technologies,facilities,experience,timeStart,timeEnd,url,number,password){
         this.email=email;
         this.password=password;
         this.technologies=technologies;

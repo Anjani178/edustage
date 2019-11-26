@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-dash',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDashComponent implements OnInit {
 
-  constructor() { }
+  specialEvents = []
+  constructor(private route:Router,private myservice:UserService) { }
 
   ngOnInit() {
+    this.myservice.getSpecialEvents()
+    .subscribe(
+      res => this.specialEvents = res,
+      err =>{
+        if(err instanceof HttpErrorResponse){
+          if(err.status === 401){
+            this.route.navigate(['/login'])
+          }
+        }
+      }
+    )
+
+    
   }
 
 }

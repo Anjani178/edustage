@@ -17,9 +17,15 @@ export class LogiService {
       if(data.message === "Success!"){
         if(data.roles ==="Mentor"){
         this.route.navigate(['/mentorD']); 
+        localStorage.setItem('token',data.token)
+        localStorage.setItem('login','yes')
+        localStorage.setItem('role',data.roles)
         }
         else if(data.roles ==="User"){
           this.route.navigate(['/userD']);
+          localStorage.setItem('token',data.token)
+          localStorage.setItem('login','yes')
+          localStorage.setItem('role',data.roles)
         }
       }
       else{
@@ -27,5 +33,35 @@ export class LogiService {
         alert( data.message +'\n\n');  
       }
     });
+}
+isMentor(){
+  if(localStorage.getItem('role') ==="Mentor"){
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+
+}
+isLogin(){
+  if(localStorage.getItem('login')==="yes"){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+loggedIn(){
+  return !!localStorage.getItem('token');
+}
+logoutUser(){
+  localStorage.removeItem('token')
+  localStorage.removeItem('role')
+  localStorage.removeItem('login')
+  this.route.navigate(['/login'])
+}
+getToken(){
+  return localStorage.getItem('token')
 }
 }

@@ -16,7 +16,7 @@ export class MentorService {
 
      const  e2= new MentorObj(email,technologies,facilities,experience,timeStart,timeEnd,url,number,password);
 
-     this.http.post('http://localhost:8091/api/info/',e2).toPromise()
+     this.http.post('http://localhost:8091/api/info',e2).toPromise()
      .then((data:any) => {
        console.log(data)
        if(data.value===422){
@@ -25,6 +25,7 @@ export class MentorService {
          alert('DUPLICATE EMAIL :-)\n\n')
        }
        else{
+        localStorage.setItem('token',data.token)
        this.route.navigate(['/login']);
          alert('SUCCESS!! :-)\n\n')
     }

@@ -14,6 +14,9 @@ export class LoginComponent implements OnInit {
   password;
   loginForm: FormGroup;
   l;
+  get f(){
+    return this.loginForm.controls;
+  }
   constructor(private lservice:LogiService,private formBuilder: FormBuilder,private route:Router) { }
   log1(){
     this.l=this.lservice.login1(this.email,this.password)

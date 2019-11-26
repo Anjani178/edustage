@@ -30,10 +30,10 @@ export class MentorSignUpComponent implements OnInit {
       technologies:['',Validators.required],
       facilities:['',Validators.required],
       experience:['',Validators.required],
-      timeStart:['',Validators.required],
-      timeEnd:['',Validators.required],
+      timeStart:['',Validators.required,Validators.pattern('[0-9]+')],
+      timeEnd:['',Validators.required,Validators.pattern('[0-9]+')],
       url:['',Validators.required],
-      number:['',Validators.required],
+      number:['',Validators.required,Validators.pattern('[0-9]+')],
       password: ['', [Validators.required, Validators.minLength(6)]],
       cpassword:['',Validators.required],
   }, {

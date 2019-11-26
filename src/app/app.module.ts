@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import {UserModule} from './user/user.module';
@@ -17,6 +17,11 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserDashComponent } from './user-dash/user-dash.component';
 import { MentorDashComponent } from './mentor-dash/mentor-dash.component';
 import { SearchComponent } from './search/search.component';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { UtCompletedComponent } from './ut-completed/ut-completed.component';
+import { UtCurrentComponent } from './ut-current/ut-current.component';
+import { SresultsComponent } from './sresults/sresults.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,9 @@ import { SearchComponent } from './search/search.component';
     MentorSignUpComponent,
     UserDashComponent,
     SearchComponent,
+    UtCompletedComponent,
+    UtCurrentComponent,
+    SresultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,11 @@ import { SearchComponent } from './search/search.component';
   ],
   exports: [ FormsModule,
     ReactiveFormsModule],
-  providers: [],
+  providers: [AuthGuard,{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
